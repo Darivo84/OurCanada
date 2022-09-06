@@ -1,0 +1,218 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteCond %{HTTPS} off
+
+
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^product/([A-Za-z0-9_-]+)$ /product-detail.php [QSA]
+RewriteRule ^category/([A-Za-z0-9_-]+)$ /category-list.php [QSA]
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+
+RewriteRule ^robots.txt$ /robots.txt.php
+
+
+RewriteRule ^terms/([^/]+)/(.*)$ terms.php?control=$1&query=$2
+RewriteRule ^terms/(.*)$ terms.php?control=$1&query=$2
+RewriteRule ^terms/ terms.php?control=$1&query=$2
+RewriteRule ^terms terms.php?control=$1&query=$2
+
+
+RewriteRule ^form/([^/]+)/(.*)$ dform.php?control=$1&query=$2
+RewriteRule ^form/(.*)$ dform.php?control=$1&query=$2
+RewriteRule ^form/ dform.php?control=$1&query=$2
+RewriteRule ^form dform.php?control=$1&query=$2
+
+RewriteRule ^formapi/([^/]+)/(.*)$ dform.php?control=$1&query=$2
+RewriteRule ^formapi/(.*)$ dform.php?control=$1&query=$2
+RewriteRule ^formapi/ dform.php?control=$1&query=$2
+RewriteRule ^formapi dform.php?control=$1&query=$2
+
+RewriteRule ^test/([^/]+)/(.*)$ devform.php?control=$1&query=$2
+RewriteRule ^test/(.*)$ devform.php?control=$1&query=$2
+RewriteRule ^test/ devform.php?control=$1&query=$2
+RewriteRule ^test devform.php?control=$1&query=$2
+
+RewriteRule ^activation/([^/]+)/(.*)$ activation.php?control=$1&query=$2
+RewriteRule ^activation/(.*)$ activation.php?control=$1&query=$2
+RewriteRule ^activation/ activation.php?control=$1&query=$2
+RewriteRule ^activation activation.php?control=$1&query=$2
+
+RewriteRule ^view_form/([^/]+)/(.*)$ view_form.php?control=$1&query=$2
+RewriteRule ^view_form/(.*)$ view_form.php?control=$1&query=$2
+#RewriteRule ^seo/ seo.php?control=$1&query=$2
+
+#RewriteRule ^seo seo.php?control=$1&query=$2
+
+RewriteRule ^js/script.js$ js/custom.js.php?param=1&arr=1 [QSA]
+
+RewriteRule ^about-us/([^/]+)/(.*)$ about-us.php?control=$1&query=$2
+RewriteRule ^about-us/(.*)$ about-us.php?control=$1&query=$2
+RewriteRule ^about-us/ about-us.php?control=$1&query=$2
+RewriteRule ^about-us about-us.php?control=$1&query=$2
+
+RewriteRule ^login/([^/]+)/(.*)$ login.php?control=$1&query=$2
+RewriteRule ^login/(.*)$ login.php?control=$1&query=$2
+RewriteRule ^login/ login.php?control=$1&query=$2
+RewriteRule ^login login.php?control=$1&query=$2
+
+RewriteRule ^signup/([^/]+)/(.*)$ signup.php?control=$1&query=$2
+RewriteRule ^signup/(.*)$ signup.php?control=$1&query=$2
+RewriteRule ^signup/ signup.php?control=$1&query=$2
+RewriteRule ^signup signup.php?control=$1&query=$2
+
+
+RewriteRule ^myforms/([^/]+)/(.*)$ myforms.php?control=$1&query=$2
+RewriteRule ^myforms/(.*)$ myforms.php?control=$1&query=$2
+RewriteRule ^myforms/ myforms.php?control=$1&query=$2
+RewriteRule ^myforms myforms.php?control=$1&query=$2
+
+RewriteRule ^activation/([^/]+)/(.*)$ activation.php?control=$1&query=$2
+RewriteRule ^activation/(.*)$ activation.php?control=$1&query=$2
+RewriteRule ^activation/ activation.php?control=$1&query=$2
+RewriteRule ^activation activation.php?control=$1&query=$2
+
+RewriteRule ^password-reset/([^/]+)/(.*)$ password-reset.php?control=$1&query=$2
+RewriteRule ^password-reset/(.*)$ password-reset.php?control=$1&query=$2
+RewriteRule ^password-reset/ password-reset.php?control=$1&query=$2
+RewriteRule ^password-reset password-reset.php?control=$1&query=
+
+RewriteRule ^change-password/([^/]+)/(.*)$ change-password.php?control=$1&query=$2
+RewriteRule ^change-password/([^/]+)/([^/]+)/(.*)$ change-password.php?control=$1&query=$2
+RewriteRule ^change-password/(.*)$ change-password.php?control=$1&query=$2
+RewriteRule ^change-password/ change-password.php?control=$1&query=$2
+RewriteRule ^change-password change-password.php?control=$1&query=$2
+
+RewriteRule ^logout/([^/]+)/(.*)$ logout.php?control=$1&query=$2
+RewriteRule ^logout/(.*)$ logout.php?control=$1&query=$2
+RewriteRule ^logout/ logout.php?control=$1&query=$2
+RewriteRule ^logout logout.php?control=$1&query=$2
+
+RewriteRule ^contact-us/([^/]+)/(.*)$ contact-us.php?control=$1&query=$2
+RewriteRule ^contact-us/(.*)$ contact-us.php?control=$1&query=$2
+RewriteRule ^contact-us/ contact-us.php?control=$1&query=$2
+RewriteRule ^contact-us contact-us.php?control=$1&query=$2
+
+
+
+RewriteRule ^settings/([^/]+)/(.*)$ settings.php?control=$1&query=$2
+RewriteRule ^settings/(.*)$ settings.php?control=$1&query=$2
+RewriteRule ^settings/ settings.php?control=$1&query=$2
+RewriteRule ^settings settings.php?control=$1&query=$2
+
+RewriteRule ^([A-Za-z0-9_-]+)$ /index.php?url=$1 [QSA]
+ErrorDocument 404    /index.php?url=$1
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+
+RewriteRule ^(.*)$ index.php [L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors off
+   php_value max_execution_time 30000
+   php_value max_input_time 60
+   php_value max_input_vars 100000
+   php_value memory_limit 3200M
+   php_value post_max_size 8000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/www/html/immigration.ourcanada.co/session"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression On
+
+
+php_value upload_max_filesize 20000M
+php_value post_max_size 8000M
+php_value max_input_vars 100000
+
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors off
+   php_value max_execution_time 30000
+   php_value max_input_time 60
+   php_value max_input_vars 100000
+   php_value memory_limit 3200M
+   php_value post_max_size 8000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/www/html/immigration.ourcanada.co/session"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# Enable Compression
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 1 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 1 month"
+</IfModule>
+

@@ -1,0 +1,41 @@
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url><loc>https://immigration.ourcanada.co/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+
+    <url><loc>https://immigration.ourcanada.co/form</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/form/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+
+    <url><loc>https://immigration.ourcanada.co/login</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/login/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+
+    <url><loc>https://immigration.ourcanada.co/signup</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://immigration.ourcanada.co/signup/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+
+
+
+</urlset>

@@ -1,0 +1,26 @@
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url><loc>https://ecommerce.ourcanada.co/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    
+
+    <url><loc>https://ecommerce.ourcanada.co/travel/</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/francais</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/hindi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/punjabi</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/spanish</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/urdu</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://ecommerce.ourcanada.co/travel/chinese</loc><priority>1</priority><changefreq>weekly</changefreq></url>
+
+
+
+</urlset>

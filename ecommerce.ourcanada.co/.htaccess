@@ -1,0 +1,122 @@
+ErrorDocument 404 https://%{HTTP_HOST}/404/
+ErrorDocument 404    /index.php?url=$1
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ index.php [L]
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^e-commerce/([0-9a-zA-Z_-]*)$ e-commerce.php [NC,L]
+RewriteRule ^e-commerce/([0-9a-zA-Z_-]*)/([0-9a-zA-Z_-]*)$ e-commerce.php [NC,L]
+RewriteRule ^e-commerce/([0-9a-zA-Z_-]*)/([0-9a-zA-Z_-]*)/([0-9a-zA-Z_-]*)$ e-commerce.php [NC,L]
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ 404.php [L]
+RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^product/([A-Za-z0-9_-]+)$ /product-detail.php [QSA]
+RewriteRule ^category/([A-Za-z0-9_-]+)$ /category-list.php [QSA]
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+RewriteRule ^travel/([^/]+)/(.*)$ travel.php?control=$1&query=$2
+RewriteRule ^travel/(.*)$ travel.php?control=$1&query=$2
+RewriteRule ^travel/ travel.php?control=$1&query=$2
+RewriteRule ^travel travel.php?control=$1&query=$2
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors On
+   php_value max_execution_time 30000
+   php_value max_input_time 60
+   php_value max_input_vars 100000
+   php_value memory_limit 3200M
+   php_value post_max_size 8000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/www/html/ourcanada.co/session"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors On
+   php_value max_execution_time 30000
+   php_value max_input_time 60
+   php_value max_input_vars 100000
+   php_value memory_limit 3200M
+   php_value post_max_size 8000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/www/html/ourcanada.co/session"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 1 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 1 month"
+</IfModule>
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresDefault "access plus 1 month"
+
+ExpiresByType image/x-icon "access plus 1 year"
+
+ExpiresByType image/gif "access plus 1 month"
+
+ExpiresByType image/png "access plus 1 month"
+
+ExpiresByType image/jpg "access plus 1 month"
+
+ExpiresByType image/jpeg "access plus 1 month"
+
+ExpiresByType text/css "access 1 month"
+
+ExpiresByType application/javascript "access plus 1 year"
+
+</IfModule>
+
+
+
+
+
+AddOutputFilterByType DEFLATE text/plain
+
+AddOutputFilterByType DEFLATE text/html
+
+AddOutputFilterByType DEFLATE text/xml
+
+AddOutputFilterByType DEFLATE text/css
+
+AddOutputFilterByType DEFLATE application/xml
+
+AddOutputFilterByType DEFLATE application/xhtml+xml
+
+AddOutputFilterByType DEFLATE application/rss+xml
+
+AddOutputFilterByType DEFLATE application/javascript
+
+AddOutputFilterByType DEFLATE application/x-javascript
+
